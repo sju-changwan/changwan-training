@@ -7,29 +7,20 @@
 <body>
 	<script>
 		'use strict';
-		let arr = ['abc',123,'가나다',999,'망고'];
+		let arr = ["남",'a','b',123,'사과',98];
+		arr.push('첫 푸시');
 		console.log(arr);
+		document.write(arr);
 		arr.pop();
 		console.log(arr);
-		
 		arr.shift();
 		console.log(arr);
-		
-		arr.push(`푸시한거당`);
+		arr.reverse();
+		console.log(arr);
+		let arr_1 = ["i", "love", 'you'];
+		arr = arr.concat(arr_1);
 		console.log(arr);
 		
-		let arr1 = [3, 4, 1, 2, -9];
-		arr1.sort();
-		console.log(arr1);
-		
-		arr1 = arr1.concat(arr);
-		console.log(arr1);
-		
-		arr1.reverse();
-		console.log(arr1);
-		
-		arr1 = arr1.join("~~");
-		console.log(arr1);
 		
 	</script>
 </body>
