@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2577</title>
+<script>
+	let f = function(arr_1){
+		let x = arr_1[0]*arr_1[1]*arr_1[2];
+		let arr_zero = Array(10).fill(0);
+		let n;
+		while(x != 0){
+			n = x % 10;
+			arr_zero[n]++;
+			x = parseInt(x/10);
+		}
+		return arr_zero;
+	}
+</script>
+</head>
+<body>
+<h1><b>백준 2577</b></h1>
+	<script>
+		'use strict';
+		let arr = []
+		for(let i = 0; i < 3; i++){
+			arr[i] = parseInt(prompt(`{i+1} 번째 숫자를 입력하시오.`));
+		}
+		arr = f(arr); //arr 재사용
+		for(let i of arr){
+			console.log(i);
+		}
+	</script>
+</body>
+</html>

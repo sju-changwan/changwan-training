@@ -2,9 +2,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<script>
+	const f = function(n){
+		if(n == 1 || n == 2){
+			return 1;
+		}
+		else{
+			return f(n-1)+f(n-2);
+		}
+	}
+	
+</script>
+<title>함수연습3</title>
 </head>
 <body>
-
+	<script>
+		'use strict';
+		let n = parseInt(prompt("구하고싶은 항을 입력하시오"));
+		let x = f(n);
+		console.log(x);
+	</script>
 </body>
 </html>
