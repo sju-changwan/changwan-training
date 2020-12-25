@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체</title>
+</head>
+<body>
+	<script>
+		'use strict';
+		const lucy = {
+					name : 'rucy',
+					age : 13,
+					sex : 'F',
+					address : '잠실'
+					}
+		console.log(lucy);
+		
+		const yumi = {
+				type : 'cat',
+				age : 12,
+				sex : 'M',
+				address : '하수구',
+				hobby : function(){
+					return `${this.age}살 유미는 자는걸 좋아해.`
+					}
+		}
+		console.log(`yumi의 종 : ${yumi.type}<br>yumi의 나이 : ${yumi.age} 살 <br>`);
+		console.log(yumi['type']);
+		
+		for(let i in yumi){
+			console.log(yumi[i]);
+		}
+		
+		console.log(yumi.hobby());
+	</script>
+</body>
+</html>

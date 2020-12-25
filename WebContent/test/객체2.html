@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생성장를 통한 객체 생성</title>
+	<script>
+		function animal(...x){
+			this.name = x[0];
+			this.age = x[1];
+			this.sex = x[2];
+			this.area = function(){
+				return this.name+'의 집은 이곳 입니다.';
+			}
+		}
+	</script>
+</head>
+<body>
+	<script>
+		'use strict';
+		const mimi = new animal('미미', 7, 'F');
+		const rucy = new animal('루시', 13, 'M');
+		console.log(mimi);
+		console.log(mimi.area());
+		mimi.family = "cat";
+		rucy.family = "dog";
+		rucy.hobby = function(){
+			return this.name+'의 취미는 잔디깍이 입니다';
+		}
+		console.log(mimi.family);
+		console.log(rucy.family);
+		console.log(rucy.hobby());
+		
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>클래스</title>
+</head>
+<body>
+	<script>
+		const Cat = class{
+			constructor(name, color, age){
+				this.name = name;
+				this.color = color;
+				this.age = age;
+			}
+			
+			intro(feed){
+				return `안녕 나는 ${this.name}라고해. 내 주식은 ${feed}야.`
+			}
+		}
+		
+		let tanggu = new Cat('tanggu', 'dark', 3)
+		console.log(tanggu.intro('참치'));
+	</script>
+</body>
+</html>

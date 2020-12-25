@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>객체3</title>
+</head>
+<body>
+	<h2><b>객체3</b></h2>
+	<script>
+		'use strict';
+		function car(name, color, speed){
+			this.name = name;
+			this.color = color;
+			this.speed = speed;
+			this.intro = function(){
+				return `${this.color}색 ${this.name}이 ${this.speed}의 속도로 달린다.`
+			}			
+		}
+		
+		const sonata = new car("sonata", 'red', 180);
+		const ferrari = new car("ferrari", "blue", 200);
+		
+		console.log(sonata.name);
+		
+		car.prototype.price = 100000000;
+		console.log(sonata.price, ferrari.price);
+		
+		
+		car.prototype.remain = ()=>{
+			return "현재 남은 기름량은 10L입니다."
+		}
+		console.log(sonata.remain());
+	</script>
+</body>
+</html>
