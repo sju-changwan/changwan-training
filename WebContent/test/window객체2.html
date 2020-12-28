@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2><del>setInterval</del></h2>
+	<script>
+	const fun1 = () => {
+		console.log("hello World");
+	}
+	
+	const clearInter = () =>{
+		window.clearInterval(si);
+	}
+	
+	const si = window.setInterval(fun1, 1500);
+	
+	</script>
+	<button onclick = "clearInter()">중지</button>
+	
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<p id = "result"></p>
+	<p>
+		<input type = "button" value = "시작" onclick = "timeStart()">
+		<input type = "button" value = "중지" onclick = "timeStop()">
+	</p>
+	<script>
+		const time = () => {
+			const date = new Date();
+			const hh = date.getHours();
+			const mm = date.getMinutes();
+			const ss = date.getSeconds();
+			document.getElementById('result').innerHTML = '<i>'+hh+'시 '+mm+'분 '+ss+'초'+ '</i>';
+		}
+				
+		const timeStart = () => {
+			si = window.setInterval(time, 1000);
+		}
+		
+		const timeStop = () => {
+			window.clearInterval(si);
+		}
+		
+		let si = null;
+	</script>
+</body>
+
+
+</html>
