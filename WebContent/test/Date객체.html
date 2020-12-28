@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		console.log(new Date());
+		console.log(new Date('2020-12-28 22:19')); //문자열 넣기 가능
+		console.log(new Date(20,11,19));
+		console.log(new Date(2020,11,19));
+		console.log(new Date(2020,11,19,18,13,14));
+		console.log(new Date(3000000000000));
+		
+		let date = new Date();
+		console.log(date.getYear());  //브라우저에 따라 조금 다르다.
+		console.log(date.getFullYear());  //권장
+		console.log(date.getMonth());
+		console.log(date.getDay());
+		console.log(date.getDate());
+		console.log(date.getHours());
+		console.log(date.getMinutes());
+		console.log(date.getSeconds());
+		console.log(date.getTime());
+		
+		
+		date.setDate(date.getDate() + 7); //각각 get함수에대한 set함수도 존재.
+		console.log(date.getDate());	
+	</script>
+</body>
+</html>
