@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>노드생성</title>
+</head>
+<body>
+	<h2>노드 생성</h2>
+	<p id="el">이 문장 앞에 새로운 문장이 추가됩니다.</p>
+	<p id="attr">이 문장에 새로운 속성이 추가됩니다.</p>
+	<p id="text"></p>
+	<button onclick="appendEl()">노드추가</button>
+	<button onclick="appendAttr()">속성추가</button>
+	<button onclick="appendText()">텍스트추가</button>
+	<script>
+		'use strict';
+		const appendEl = function(){
+			const el = document.getElementById("el");
+			const newNode = document.createElement('p');
+			newNode.innerHTML = "<b>새로운 문장입니다</b>."
+			document.body.insertBefore(newNode, el);
+		}
+		
+		const appendAttr = function(){
+			const attr = document.getElementById('attr');
+			const newAttr = document.createAttribute('style');
+			newAttr.value = "color : blue";
+			attr.setAttributeNode(newAttr); //setAttribute('style', 'color : blue') 와 같다
+		}
+		
+		const appendText = function(){
+			const text = document.getElementById("text");
+			const newText = document.createTextNode('새로운 텍스트 입니다.');
+			text.appendChild(newText);
+		}
+	</script>
+</body>
+</html>

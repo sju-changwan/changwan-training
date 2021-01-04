@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>노드교체</h2>
+	<div id="list">
+		<p id = "first">교체될 노드</p>
+		<p>아이셔</p>
+		<p>꼬마곰젤리</p>
+	</div>
+	<hr/>
+	<p id="second">코카콜라</p>
+	<hr/>
+	<p id="text">기차가 터널을 지났습니다</p>
+	<button onclick="replaceNode()">노드 교체</button>
+	<button onclick="replaceText()">텍스트 교체</button>
+
+	<script>
+		'use strict';
+		const replaceNode = function(){
+			const parent = document.getElementById('list');
+			const second = document.getElementById('second');
+			const first = document.getElementById('first');
+			parent.replaceChild(second, first);
+		}
+		
+		const replaceText = function(){
+			const text = document.getElementById('text').firstChild;
+			text.replaceData(4, 2, '드넓은 벌판');
+		}
+
+	</script>
+	
+</body>
+</html>

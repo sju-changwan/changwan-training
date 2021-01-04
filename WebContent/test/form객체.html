@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>form 객체</title>
+</head>
+<body>
+	<form name="frm">
+		<input type="text" name="id" placeholder="아이디 입력" value="NEWYORK"><br>
+		<input type="password" name="password" placeholder="패스워드 입력"><br>
+		<input type=submit value=제출>
+	</form>
+
+	<script>
+		const frm1 = document.frm
+		console.log(frm1.id.placeholder);
+		console.log("1. " + frm1.id.value);
+		console.log("2. " + frm1[0].value); //form객체일 경우만 인덱스를 통하여 하위요소에 접근가능하다. 예를들어 ul의 경우 이처럼 인덱스를 통해 하위요소인 li에 접근할 수 없다.
+		console.log("3. " + document.forms[0].id.value);
+		console.log("4. " + document.forms[0][0].value);
+		console.log("5. " + document.forms['frm'].elements['id'].value);
+		console.log("6. " + document.getElementsByName('id')[0].value);
+	</script>
+</body>
+</html>

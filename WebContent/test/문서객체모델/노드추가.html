@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>노드 추가</title>
+<script>
+		const appendNode = function(){
+			const parent = document.getElementById("list");
+			const newNode = document.getElementById("item1");
+			parent.appendChild(newNode);
+		}
+		
+		const insertNode = function(){
+			const parent = document.getElementById("list");
+			const newNode = document.getElementById("item2");
+			parent.insertBefore(newNode,parent.firstElementChild);
+		}
+		
+		const appendText = function(){
+			const text = document.getElementById("time").firstChild;
+			const date = new Date();
+			const hh = date.getHours();
+			const mm = date.getMinutes();
+			const ss = date.getSeconds();
+			text.insertData(4,hh+"시 "+mm+"분 "+ss+"초");
+		}
+
+</script>
+</head>
+<body>
+	<h2>노드의 추가</h2>
+	<p id = "item1">java script</p>
+	<p id = "item2">Jquery</p>
+	<hr/>
+	<div id="list">
+		<p>Node.js</p>
+		<p>Spring</p>
+		<p>React</p>
+	</div>
+	<hr/>
+	<p id='time'>지금은 </p>
+	<hr/>
+	<input type="button" value="노드추가1" onclick="appendNode()">
+	<input type="button" value="노드추가2" onclick="insertNode()">
+	<input type="button" value="텍스트추가" onclick="appendText()">
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>노드제거</title>
+</head>
+<body>
+	<div id="list">
+		<p>banana</p>
+		<p style = "background-color : gold; color : deeppink">apple</p>
+		<p>grape</p>
+	</div>
+	<hr/>
+	<button onclick = "removeEl()">요소제거</button>
+	<button onclick = "removeAttr()">속성제거</button>
+	
+	<script>
+		'use strict';
+		const removeEl = function(){
+			const parent = document.getElementById('list');
+			parent.removeChild(parent.lastElementChild);
+		}
+		const removeAttr = function(){
+			const apple = document.getElementsByTagName('p').item(1);
+			apple.removeAttribute('style');
+		}
+	</script>
+</body>
+</html>
