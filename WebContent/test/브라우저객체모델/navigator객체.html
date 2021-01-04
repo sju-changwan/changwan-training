@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>geolocation</h2>
+	<input type="button" value="위/경도 출력" onclick="locationHandler()">
+	<div id="location"></div>
+	<script>
+		'use strict';
+		const showlocation = function(position){
+			document.getElementById("location").innerHTML = "위도 : "+Math.round(position.coords.latitude)+"<br>"+"경도 : "+Math.round(position.coords.longitude);
+
+		}
+		const error = function(msg){
+			console.log(msg.code);
+		}
+		const locationHandler = function(){
+		navigator.geolocation.getCurrentPosition(showlocation, error);									
+		}
+			
+		
+	</script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>원한는 site로 연결</title>
+</head>
+<body>
+	<h2>원하는 site로 연결</h2>
+	<form name="myform">
+		<p>
+		<label for="naver">네이버</label>
+		<input type="radio" value="naver" id="naver" name="site">
+		</p>
+		<p>
+		<label for="naver">다음</label>
+		<input type="radio" value="daum" id="daum" name="site">
+		</p>
+		<p>
+		<label for="clock">시계</label>
+		<input type="radio" value="clock" id="clock" name="site">
+		</p>
+		<input type="button" value="이동" onclick="sendit()">
+	</form>
+	<script>
+		'use strict';
+		const sendit = function(){
+			const frm = document.myform;
+			if(frm.site.value == "naver"){
+				location.href = "https://www.naver.com";
+			}else if(frm.site.value == "daum"){
+				location.href = "https://www.daum.net";
+			}else{
+				location.href = "../시계.html";
+			}
+		}
+	</script>
+</body>
+</html>

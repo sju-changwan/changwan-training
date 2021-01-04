@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>DOM객체1</title>
+</head>
+<body>
+	<ul>
+		<li id="js" class="js">Java Script</li>
+		<li id="js">Java</li>
+		<li id="js" class="js">jQuery</li>
+		<li class="js">Node.js</li>
+		<li class="js" name="py">Spring</li>
+		<li name="py">python</li>	
+		<li class="server">php</li>	
+		<li class="server">jsp</li>	
+		<li class="server">apache</li>	
+	</ul>
+	<script>
+	const tagName = document.getElementsByTagName("li");
+	console.log(tagName);
+	
+	console.log("----------------------------");
+	for(let i=0 ; i<tagName.length ; i++){
+		console.log(tagName.item(i)==tagName[i]);
+	}
+	
+	for(let i=0; i<tagName.length; i++){
+		tagName.item(i).style.color = "gold";
+	}
+	
+	const className = document.getElementsByClassName("js");
+	for(let i=0; i<className.length; i++){
+		className.item(i).style.color = "deepskyblue";
+	}
+	
+	const id = document.getElementById("js");
+	id.style.color = "deeppink";
+	
+	const name = document.getElementsByName("py");
+	for(let i=0; i<name.length; i++){
+		name.item(i).style.color = "red";
+	}
+	
+	const querySelector = document.querySelectorAll("li.server");
+	for(let i=0; i<querySelector.length; i++){
+		querySelector.item(i).style.color = "blue";
+	}
+	</script>
+</body>
+</html>

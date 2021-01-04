@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>history객체</h2>
+	<input type="button" value="뒤로" onclick="goBack()">
+	<input type="button" value="앞으로" onclick="goForward()">
+	<input type="button" value="뒤로2페이지" onclick="go()">
+	<input type="button" value="새로고침" onclick="reRoad()">
+	<script>
+		'use strict';
+		function goBack(){
+			history.back();
+		}
+		function goForward(){
+			history.forward();
+		}
+		function go(){
+			history.go(-2);
+		}
+		function reRoad(){
+			history.go(0);
+		}
+	</script>
+
+</body>
+</html>
