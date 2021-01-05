@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		const str = document.getElementById('str');
+		str.innerHTML = "문서가 모두 로드 되었습니다.";
+	}
+</script>
+</head>
+<body>
+	<h2>아래 문자열을 클릭하세요.</h2>
+	<br>
+	<p id="str" onclick="changeString(this)"></p>
+	<script>
+		'use strict';
+		const changeString = function(str){
+			str.innerHTML = "<b>HELLO WORLD!</b>";
+		}
+	</script>
+</body>
+</html>

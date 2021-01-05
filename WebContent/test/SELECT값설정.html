@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>SELECT</h2>
+	<select id="test">
+		<option value="0">선택하세요.</option>
+	</select>	
+	<button onclick = "setSelect()">셀렉트 값 설정</button>
+	<script>
+		'use strict';	
+		const fruitList = [{key:'banana', val:'바나나'}
+					,{key:'apple', val:'사과'}
+					,{key:'grape', val:'포도'}
+					,{key:'peach', val:'복숭아'}];
+		
+		const select = document.getElementById("test");
+		
+		const setSelect = function(){
+			fruitList.forEach(function(element, idx){
+				const opt = document.createElement('option');
+				opt.setAttribute('value',element.key);
+				opt.innerHTML = element.val;
+				select.appendChild(opt);
+			});
+		}
+	</script>
+</body>
+</html>
