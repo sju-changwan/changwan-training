@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>form3</title>
+</head>
+<body>
+	<form action="ex01_01.html" method="get">
+		<table>
+			<tr>
+				<td>컴퓨터 운영체제</td>
+				<td>
+					<select name="os" size="3" multiple> <!-- multiple이 안먹힌다 -->
+						<option value="window" selected>윈도우7</option>
+						<option value="linux">리눅스</option>
+						<option value="unix">유닉스</option>
+						<option value="android">안드로이드</option>
+						<option value="mac">맥OS</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>기타사항</td>
+				<td>
+					<textarea name = "text" rows="7" cols="50">text AREA</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="제출"></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

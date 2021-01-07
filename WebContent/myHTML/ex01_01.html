@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="id&pw"></div>
+	<script>
+		const address = location.href
+		idx = address.indexOf('?');
+		const id_pw = address.substring(idx+1);
+		const id = id_pw.substring(0,id_pw.indexOf('&'));
+		const pw = id_pw.substring(id_pw.indexOf('&')+1);
+		document.getElementById('id&pw').innerHTML = id + "<br>" + pw;
+		
+	</script>
+</body>
+</html>
