@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<title>font</title>
+<style>
+	div.fs{font-size:25px;
+		line-height:3em;
+	}
+	.fs:first-letter{
+		color:white;
+		font-size: 50px;
+		background-color:blue;
+	}
+	#f1{font-variant: small-caps;}
+	#f1~.fs{
+		background-color:pink;
+	}
+	#f2{font-style: italic;}
+	#f3{font-family: "Comic Sans Ms"}
+	#f4{font-weight:bolder;}
+</style>
+</head>
+<body>
+	<div class="fs" id="f0">Rather be dead than cool.</div>
+	<div class="fs" id="f1">Rather be dead than cool.</div>
+	<div class="fs" id="f2">Rather be dead than cool.</div>
+	<div class="fs" id="f3">Rather be dead than cool.</div>
+	<div class="fs" id="f4">Rather be dead than cool.</div>
+</body>
+</html>
