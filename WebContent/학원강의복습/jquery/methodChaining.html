@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메소드 체이닝</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h2>method Chaining</h2>   
+    <div id="m1">
+        <div>내용 1-1</div>
+        <p>내용 1-2</p>
+    </div>
+    <div id="m2">
+        <p>내용</p>
+    </div>
+    <div id="m3">
+        <span>내용 3-1</span><em>내용 3-2</em>
+    </div>
+    <div id="m4">
+        <p>내용 4</p>
+    </div>
+    <script>
+        $(function(){
+            $('#m1>div').add('#m1>p').css('border', '3px dashed red');
+            $('#m2').children('p').addBack().css('border', '3px solid deeppink');
+            $('#m3').find('*').css('border', '2px solid yellow').end().find('em').css('border', '3px dashed gray');
+            console.log($('#m4').children().is('span'));
+            console.log($('#m4').children().is('p'));
+        })
+    </script>
+</body>
+</html>

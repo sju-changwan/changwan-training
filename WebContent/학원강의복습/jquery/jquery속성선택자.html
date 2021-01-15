@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h2>속성선택자</h2>
+    <img src="snow1.png" width="200px" height="200px" alt = "snow1.png">
+    <button class="change">변경</button>
+    <script>
+        $(function(){
+            $("button[class='change']").on('click',function(){
+                if($('img').attr('src') == "snow1.png"){
+                    $('img').attr('src', 'snow2.png');
+                }else{
+                    $('img').attr('src', 'snow1.png');
+                }
+            })
+        })
+    </script>
+</body>
+</html>

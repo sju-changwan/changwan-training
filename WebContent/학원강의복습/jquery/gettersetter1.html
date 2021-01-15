@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gettersetter1</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h3>getter setter method</h3>
+    <p>클릭하면 밑에 위 문장이 나타납니다.</p>
+    <p id="text"></p>
+    <script>
+        $(function(){
+            $('p:eq(0)').on('click', function(){
+                const newText = $('h3').html();
+                $('p[id="text"]').html(newText);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr과 prop의 차이</title>
+    <script src="./jquery-3.5.1.min.js"></script>  
+</head>
+<body>
+    <input type="checkbox" id="c1"><label for="c1">c1</label>
+    <input type="checkbox" id="c2"><label for="c2">c2</label>
+    <script>
+        $(function(){
+            console.log($('input:checkbox').eq(0).attr('checked'));
+            console.log($('input:checkbox').eq(0).prop('checked'));
+            $('input[type="checkbox"]').eq(0).attr('checked', 'checked'); //attrobute를 변경
+            $('input:checkbox').eq(1).prop('checked', true); //property를 변경
+            console.log($('input:checkbox').eq(0).attr('checked')); //checked
+            console.log($('input:checkbox').eq(0).prop('checked')); //true
+            console.log($('input:checkbox').eq(1).attr('checked')); //undefined 즉. attr은 prop가 변경된다고 변경되지 않는다.
+            console.log($('input:checkbox').eq(1).prop('checked')); //true
+
+            const cBox = document.getElementById('c2')
+            console.log(cBox.checked);  //dom 객체로 접근할때는 프로퍼티개념.
+            
+        })
+    </script>
+</body>
+</html>
