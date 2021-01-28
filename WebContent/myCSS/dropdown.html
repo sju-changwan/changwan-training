@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #999;
+            overflow: hidden; /*ul배경색 보여주기*/
+        }
+        li a, .dropbtn{
+            display: inline-block;
+            text-align:center;
+            text-decoration:none;
+            padding: 10px 10px;
+            
+        }
+        li{
+            float: left;
+        }
+        li a:hover, .dropdown:hover .dropbtn{
+            background-color:red;
+        }
+        .dropdown{
+            display: inline-block;
+        }
+        li a.active, a.active:hover{
+            background-color: #4CAF50;
+        }
+        .dropdown-content{
+            display: none;
+        }
+        .dropdown-content a{
+            display:block;
+        }
+
+        
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">메일</a></li>
+        <li><a href="#">카페</a></li>
+        <li><a href="#">블로그</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">쇼핑</a>
+            <div class="dropdown-content">
+                <a href="#">가전제품</a>
+                <a href="#">의류/악세서리</a>
+                <a href="#">가방/신발</a>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
